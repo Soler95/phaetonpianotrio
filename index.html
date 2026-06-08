@@ -1,1 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Phaeton Piano Trio — Friedemann Eichhorn, Peter Hörr, Florian Uhlig. One of the most exciting piano trios on the international concert scene."/>
+  <title>Phaeton Piano Trio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phaeton.css">
+</head>
+<body>
 
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">Phaeton <span>Piano Trio</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#home"    class="nav-link">Home</a>
+        <a href="#about"   class="nav-link">About</a>
+        <a href="#members" class="nav-link">Artists</a>
+        <a href="#press"   class="nav-link">Press</a>
+        <a href="#media"   class="nav-link">Media</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide active" style="background-image: url('https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0089b_A4.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0071_c.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0323_A4.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('https://www.phaetonpianotrio.com/wp-content/uploads/2017/11/s1945_0338_A4.jpg')"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Violin · Cello · Piano</p>
+      <h1>Phaeton<br><em>Piano Trio</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Friedemann Eichhorn · Peter Hörr · Florian Uhlig</p>
+      <div class="hero-cta">
+        <a href="#about"   class="btn btn--gold">Discover</a>
+        <a href="#contact" class="btn btn--outline">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero-dots" id="heroDots">
+      <div class="hero-dot active" data-index="0"></div>
+      <div class="hero-dot" data-index="1"></div>
+      <div class="hero-dot" data-index="2"></div>
+      <div class="hero-dot" data-index="3"></div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>scroll</span>
+    </div>
+
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Library of Congress · Washington</span>
+      <span class="marquee-item">Frick Collection · New York</span>
+      <span class="marquee-item">Elbphilharmonie · Hamburg</span>
+      <span class="marquee-item">Konzerthaus Berlin</span>
+      <span class="marquee-item">MozartFest Würzburg</span>
+      <span class="marquee-item">Ottawa Music and Beyond Festival</span>
+      <span class="marquee-item">Fundación Beethoven · Santiago de Chile</span>
+      <span class="marquee-item">Three German Artists · International Standing</span>
+      <span class="marquee-item">Library of Congress · Washington</span>
+      <span class="marquee-item">Frick Collection · New York</span>
+      <span class="marquee-item">Elbphilharmonie · Hamburg</span>
+      <span class="marquee-item">Konzerthaus Berlin</span>
+      <span class="marquee-item">MozartFest Würzburg</span>
+      <span class="marquee-item">Ottawa Music and Beyond Festival</span>
+      <span class="marquee-item">Fundación Beethoven · Santiago de Chile</span>
+      <span class="marquee-item">Three German Artists · International Standing</span>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <div data-reveal>
+      <span class="quote-mark" aria-hidden="true">"</span>
+      <blockquote>
+        Not by chance did the trio name itself after the son of the Greek Sun God Helios.
+        Phaeton, the shining one, drove his father's sun chariot across the sky.
+        As demanding as the name is, so fantastic is the ensemble.
+      </blockquote>
+      <cite>— Ipf-und Jagd Zeitung</cite>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-image" data-reveal>
+          <img
+            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0110_retouch-1.jpg"
+            alt="Phaeton Piano Trio in concert">
+        </div>
+        <div class="about-text">
+          <div class="label" data-reveal>About</div>
+          <h2 data-reveal>The Ensemble</h2>
+          <p class="body-text" data-reveal>
+            The Phaeton Piano Trio unites three top German artists of international standing —
+            Friedemann Eichhorn on violin, Peter Hörr on cello, and Florian Uhlig on piano —
+            to form one of the most exciting piano trios on the international concert scene.
+          </p>
+          <p class="body-text" data-reveal>
+            As soloists, the artists have been successfully touring the major stages throughout
+            Europe, in Asia, and North and South America for more than twenty years. Based in
+            Weimar, Germany, they bring a weight and seriousness to the great Romantic repertoire
+            that does not stifle enjoyment.
+          </p>
+          <p class="body-text" data-reveal>
+            Their North American debut at the Library of Congress in 2020 — where Friedemann Eichhorn
+            was given the honor of playing the Kreisler Guarneri del Gesù — was followed by acclaimed
+            appearances at the Frick Collection in New York, in Cleveland, Princeton, and across Canada.
+            In cooperation with the SWR Kaiserslautern, the trio is recording the complete piano trio
+            works of Camille Saint-Saëns for Hänssler Classic.
+          </p>
+          <div data-reveal style="margin-top: 2rem;">
+            <a href="#contact" class="btn btn--outline">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERS -->
+  <section id="members" class="section section--dark">
+    <div class="wrap">
+      <div class="label" data-reveal>Artists</div>
+      <h2 data-reveal>Three Masters,<br><em>One Voice</em></h2>
+      <div class="members-grid">
+
+        <div class="member-card" data-reveal>
+          <img
+            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0352_A4.jpg"
+            alt="Friedemann Eichhorn — Violin">
+          <div class="member-overlay">
+            <span class="member-instrument">Violin</span>
+            <h3 class="member-name">Friedemann<br>Eichhorn</h3>
+          </div>
+        </div>
+
+        <div class="member-card" data-reveal>
+          <img
+            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0371_A4.jpg"
+            alt="Peter Hörr — Cello">
+          <div class="member-overlay">
+            <span class="member-instrument">Cello</span>
+            <h3 class="member-name">Peter<br>Hörr</h3>
+          </div>
+        </div>
+
+        <div class="member-card" data-reveal>
+          <img
+            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0386_A4.jpg"
+            alt="Florian Uhlig — Piano">
+          <div class="member-overlay">
+            <span class="member-instrument">Piano</span>
+            <h3 class="member-name">Florian<br>Uhlig</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press" class="section">
+    <div class="wrap">
+      <div class="label" data-reveal>Press</div>
+      <h2 data-reveal>What Critics Say</h2>
+      <div class="press-grid">
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"Sublime beauty of sound."</p>
+          <span class="press-source">— Schwaebische Post</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"Uncanny unity."</p>
+          <span class="press-source">— clevelandclassical.org</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"Peter Hörr is a fantastic cellist and clearly a name to watch."</p>
+          <span class="press-source">— The Guardian</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"Florian Uhlig plays in masterly fashion. His interpretations bear comparison with the very best."</p>
+          <span class="press-source">— Süddeutsche Zeitung</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"Watch out for Friedemann Eichhorn."</p>
+          <span class="press-source">— The Strad</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"One of the most exciting piano trios on the international concert scene."</p>
+          <span class="press-source">— Rheinzeitung</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"This intensity fascinated from the very start — the trio not only shone as brilliant soloists, but joined to present an organic sound body."</p>
+          <span class="press-source">— Westdeutsche Zeitung</span>
+        </div>
+
+        <div class="press-item" data-reveal>
+          <p class="press-quote">"Thanks to a highly musical art of storytelling and a smart dramaturgical presentation, the trio reveals the seemingly unending romantic potential of this music."</p>
+          <span class="press-source">— Schwetzinger Zeitung</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media" class="section section--dark">
+    <div class="wrap">
+      <div class="label" data-reveal>Media</div>
+      <h2 data-reveal>Featured<br><em>Performances</em></h2>
+      <div class="video-grid">
+
+        <div data-reveal>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/DVtYap2uWXo"
+              title="Phaeton Piano Trio — Library of Congress"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <p class="video-label">Mendelssohn Piano Trio in D minor — Library of Congress</p>
+        </div>
+
+        <div data-reveal>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/_RDVd9EOkTY"
+              title="Phaeton Piano Trio — Beethoven, Dvorák, Haydn"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <p class="video-label">Beethoven · Dvořák · Haydn — Live Performance</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="wrap">
+      <div class="label" data-reveal>Gallery</div>
+      <h2 data-reveal>Selected<br><em>Images</em></h2>
+      <div class="members-grid" style="margin-top: 3rem;">
+        <div class="member-card" data-reveal>
+          <img src="https://www.phaetonpianotrio.com/wp-content/uploads/2017/11/s1945_0255_A4.jpg" alt="Phaeton Piano Trio">
+          <div class="member-overlay"></div>
+        </div>
+        <div class="member-card" data-reveal>
+          <img src="https://shuppartists.com/images/phaeton-2-11.25x7.5-copy-1000.jpg" alt="Phaeton Piano Trio — Shupp Artists">
+          <div class="member-overlay"></div>
+        </div>
+        <div class="member-card" data-reveal>
+          <img src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0323_A4.jpg" alt="Phaeton Piano Trio in rehearsal">
+          <div class="member-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--dark">
+    <div class="wrap">
+      <div class="label" data-reveal>Contact</div>
+      <h2 data-reveal>Management<br><em>&amp; Bookings</em></h2>
+      <div class="contact-grid">
+
+        <div>
+          <div class="agency" data-reveal>
+            <div class="agency-name">EU &amp; South America</div>
+            <p>
+              <strong>Berlin Klassik Artist Management</strong><br>
+              Martin Soler Ruiz · Artist Manager<br>
+              Danziger Strasse 48, D–10435 Berlin<br>
+              Tel: +49 157 32538324<br>
+              <a href="mailto:info@berlinklassikartistmanagement.com">info@berlinklassikartistmanagement.com</a><br>
+              <a href="https://www.berlinklassikartistmanagement.com" target="_blank" rel="noopener">berlinklassikartistmanagement.com</a>
+            </p>
+          </div>
+
+          <div class="agency" data-reveal>
+            <div class="agency-name">North America</div>
+            <p>
+              <strong>Shupp Artists Management</strong><br>
+              Erica Shupp<br>
+              202 Michigan Avenue, Port Jefferson, NY 11777 USA<br>
+              Tel: +1 631 928 1531<br>
+              <a href="mailto:concerts@shuppartists.com">concerts@shuppartists.com</a><br>
+              <a href="https://shuppartists.com" target="_blank" rel="noopener">shuppartists.com</a>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="agency" data-reveal>
+            <div class="agency-name">Ensemble Direct</div>
+            <p>
+              <strong>Prof. Peter Hörr</strong><br>
+              Alexander-von-Szpinger-Str. 7<br>
+              99425 Weimar, Germany<br>
+              Tel: +49 (0) 3643 46 85 780<br>
+              <a href="mailto:peterhoerr@me.com">peterhoerr@me.com</a><br>
+              <a href="https://www.phaetonpianotrio.com/en/" target="_blank" rel="noopener">phaetonpianotrio.com</a>
+            </p>
+          </div>
+
+          <div class="agency" data-reveal>
+            <div class="agency-name">Turkey · Middle East</div>
+            <p>
+              <strong>KAM Management</strong><br>
+              Ruya Evren · Artist &amp; Project Manager<br>
+              Tel: +90 532 689 0414<br>
+              <a href="mailto:ruya@konserarkasi.com">ruya@konserarkasi.com</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Phaeton <span>Piano Trio</span></div>
+      </div>
+      <p class="footer-tagline">"The shining one."</p>
+      <div class="footer-links">
+        <a href="https://www.phaetonpianotrio.com/en/" target="_blank" rel="noopener">Website</a>
+        <a href="https://www.facebook.com/PhaetonPianoTrio/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://shuppartists.com/phaeton-piano-trio.html" target="_blank" rel="noopener">Shupp Artists</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © <span id="year"></span> Phaeton Piano Trio —
+      Friedemann Eichhorn · Peter Hörr · Florian Uhlig
+    </div>
+  </footer>
+
+  <script>
+    /* ── Year ── */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ── Header scroll ── */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile nav ── */
+    const nav = document.getElementById('nav');
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.classList.toggle('open', open);
+      document.body.classList.toggle('nav-open', open);
+    });
+    document.querySelectorAll('.nav-link').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.classList.remove('open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+
+    /* ── Scroll reveal ── */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
+
+    /* ── Smooth scroll ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    /* ── Hero slideshow ── */
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots   = document.querySelectorAll('.hero-dot');
+    let current  = 0;
+    let timer;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function nextSlide() {
+      goTo((current + 1) % slides.length);
+    }
+
+    function startTimer() {
+      timer = setInterval(nextSlide, 5000);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        goTo(+dot.dataset.index);
+        startTimer();
+      });
+    });
+
+    startTimer();
+  </script>
+
+</body>
+</html>
