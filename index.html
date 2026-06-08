@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,23 +11,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="header-inner">
       <a href="#home" class="logo">Phaeton <span>Piano Trio</span></a>
+
       <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
         <span></span><span></span>
       </button>
+
       <nav class="nav" id="nav">
-        <a href="#home"    class="nav-link">Home</a>
-        <a href="#about"   class="nav-link">About</a>
-        <a href="#members" class="nav-link">Artists</a>
-        <a href="#press"   class="nav-link">Press</a>
-        <a href="#media"   class="nav-link">Media</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#home"    class="nav-link"><span lang-en>Home</span><span lang-de>Start</span></a>
+        <a href="#about"   class="nav-link"><span lang-en>About</span><span lang-de>Über uns</span></a>
+        <a href="#members" class="nav-link"><span lang-en>Artists</span><span lang-de>Künstler</span></a>
+        <a href="#press"   class="nav-link"><span lang-en>Press</span><span lang-de>Presse</span></a>
+        <a href="#media"   class="nav-link"><span lang-en>Media</span><span lang-de>Medien</span></a>
+        <a href="#contact" class="nav-link"><span lang-en>Contact</span><span lang-de>Kontakt</span></a>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" id="btnDE" onclick="setLang('de')">DE</button>
+        </div>
       </nav>
     </div>
   </header>
+
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-slides" id="heroSlides">
@@ -44,8 +54,8 @@
       <div class="hero-divider"></div>
       <p class="hero-sub">Friedemann Eichhorn · Peter Hörr · Florian Uhlig</p>
       <div class="hero-cta">
-        <a href="#about"   class="btn btn--gold">Discover</a>
-        <a href="#contact" class="btn btn--outline">Contact</a>
+        <a href="#about"   class="btn btn--gold"><span lang-en>Discover</span><span lang-de>Entdecken</span></a>
+        <a href="#contact" class="btn btn--outline"><span lang-en>Contact</span><span lang-de>Kontakt</span></a>
       </div>
     </div>
     <div class="hero-dots" id="heroDots">
@@ -59,6 +69,7 @@
       <span>scroll</span>
     </div>
   </section>
+
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
@@ -69,7 +80,7 @@
       <span class="marquee-item">MozartFest Würzburg</span>
       <span class="marquee-item">Ottawa Music and Beyond Festival</span>
       <span class="marquee-item">Fundación Beethoven · Santiago de Chile</span>
-      <span class="marquee-item">Three German Artists · International Standing</span>
+      <span class="marquee-item">Drei deutsche Künstler · Internationale Bühnen</span>
       <span class="marquee-item">Library of Congress · Washington</span>
       <span class="marquee-item">Frick Collection · New York</span>
       <span class="marquee-item">Elbphilharmonie · Hamburg</span>
@@ -77,21 +88,28 @@
       <span class="marquee-item">MozartFest Würzburg</span>
       <span class="marquee-item">Ottawa Music and Beyond Festival</span>
       <span class="marquee-item">Fundación Beethoven · Santiago de Chile</span>
-      <span class="marquee-item">Three German Artists · International Standing</span>
+      <span class="marquee-item">Drei deutsche Künstler · Internationale Bühnen</span>
     </div>
   </div>
+
   <!-- QUOTE -->
   <div class="quote-section">
     <div data-reveal>
       <span class="quote-mark" aria-hidden="true">"</span>
-      <blockquote>
+      <blockquote lang-en>
         Not by chance did the trio name itself after the son of the Greek Sun God Helios.
         Phaeton, the shining one, drove his father's sun chariot across the sky.
         As demanding as the name is, so fantastic is the ensemble.
       </blockquote>
-      <cite>— Ipf-und Jagd Zeitung</cite>
+      <blockquote lang-de>
+        Nicht von ungefähr hat sich das Trio nach dem Sohn des griechischen Sonnengottes Helios benannt.
+        Phaeton, der Strahlende, lenkte den Sonnenwagen seines Vaters durch den Himmel.
+        So anspruchsvoll der Name ist, so fantastisch ist das Ensemble.
+      </blockquote>
+      <cite>— Ipf-und Jagst-Zeitung</cite>
     </div>
   </div>
+
   <!-- ABOUT -->
   <section id="about" class="section">
     <div class="wrap">
@@ -102,74 +120,104 @@
             alt="Phaeton Piano Trio in concert">
         </div>
         <div class="about-text">
-          <div class="label" data-reveal>About</div>
-          <h2 data-reveal>The Ensemble</h2>
-          <p class="body-text" data-reveal>
-            The Phaeton Piano Trio unites three top German artists of international standing —
-            Friedemann Eichhorn on violin, Peter Hörr on cello, and Florian Uhlig on piano —
-            to form one of the most exciting piano trios on the international concert scene.
-          </p>
-          <p class="body-text" data-reveal>
-            As soloists, the artists have been successfully touring the major stages throughout
-            Europe, in Asia, and North and South America for more than twenty years. Based in
-            Weimar, Germany, they bring a weight and seriousness to the great Romantic repertoire
-            that does not stifle enjoyment.
-          </p>
-          <p class="body-text" data-reveal>
-            Their North American debut at the Library of Congress in 2020 — where Friedemann Eichhorn
-            was given the honor of playing the Kreisler Guarneri del Gesù — was followed by acclaimed
-            appearances at the Frick Collection in New York, in Cleveland, Princeton, and across Canada.
-            In cooperation with the SWR Kaiserslautern, the trio is recording the complete piano trio
-            works of Camille Saint-Saëns for Hänssler Classic.
-          </p>
+          <div class="label" data-reveal><span lang-en>About</span><span lang-de>Über uns</span></div>
+          <h2 data-reveal><span lang-en>The Ensemble</span><span lang-de>Das Ensemble</span></h2>
+          <div lang-en>
+            <p class="body-text" data-reveal>
+              The Phaeton Piano Trio unites three top German artists of international standing —
+              Friedemann Eichhorn on violin, Peter Hörr on cello, and Florian Uhlig on piano —
+              to form one of the most exciting piano trios on the international concert scene.
+            </p>
+            <p class="body-text" data-reveal>
+              As soloists, the artists have been successfully touring the major stages throughout
+              Europe, in Asia, and North and South America for more than twenty years. Based in
+              Weimar, Germany, they bring a weight and seriousness to the great Romantic repertoire
+              that does not stifle enjoyment.
+            </p>
+            <p class="body-text" data-reveal>
+              Their North American debut at the Library of Congress in 2020 — where Friedemann Eichhorn
+              was given the honor of playing the Kreisler Guarneri del Gesù — was followed by acclaimed
+              appearances at the Frick Collection in New York, in Cleveland, Princeton, and across Canada.
+              In cooperation with the SWR Kaiserslautern, the trio is recording the complete piano trio
+              works of Camille Saint-Saëns for Hänssler Classic.
+            </p>
+          </div>
+          <div lang-de>
+            <p class="body-text" data-reveal>
+              Das Phaeton Piano Trio vereint drei herausragende deutsche Künstler von internationalem Rang —
+              Friedemann Eichhorn an der Violine, Peter Hörr am Cello und Florian Uhlig am Klavier —
+              zu einem der aufregendsten Klaviertrios der internationalen Konzertszene.
+            </p>
+            <p class="body-text" data-reveal>
+              Als Solisten sind die Künstler seit mehr als zwanzig Jahren erfolgreich auf den großen Bühnen
+              in Europa, Asien sowie Nord- und Südamerika tätig. Mit Sitz in Weimar bringen sie dem großen
+              romantischen Repertoire eine Tiefe und Ernsthaftigkeit entgegen, die dennoch ungetrübten
+              Hörgenuss bereitet.
+            </p>
+            <p class="body-text" data-reveal>
+              Ihr nordamerikanisches Debüt an der Library of Congress 2020 — wo Friedemann Eichhorn die
+              Ehre hatte, auf der Kreisler Guarneri del Gesù zu spielen — folgten umjubelte Auftritte in
+              der Frick Collection in New York, in Cleveland, Princeton und durch ganz Kanada.
+              In Zusammenarbeit mit dem SWR Kaiserslautern nimmt das Trio die vollständigen Klaviertrio-
+              werke von Camille Saint-Saëns für Hänssler Classic auf.
+            </p>
+          </div>
           <div data-reveal style="margin-top: 2rem;">
-            <a href="#contact" class="btn btn--outline">Get in touch</a>
+            <a href="biography.html" class="btn btn--outline" style="color:var(--fire);border-color:var(--fire-border)">
+              <span lang-en>Read Biographies</span><span lang-de>Biografien lesen</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- MEMBERS -->
   <section id="members" class="section section--dark">
     <div class="wrap">
-      <div class="label" data-reveal>Artists</div>
-      <h2 data-reveal>Three Masters,<br><em>One Voice</em></h2>
+      <div class="label" data-reveal><span lang-en>Artists</span><span lang-de>Künstler</span></div>
+      <h2 data-reveal><span lang-en>Three Masters,<br><em>One Voice</em></span><span lang-de>Drei Meister,<br><em>eine Stimme</em></span></h2>
       <div class="members-grid">
+
         <div class="member-card" data-reveal>
-          <img
-            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0352_A4.jpg"
-            alt="Friedemann Eichhorn — Violin">
+          <img src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0352_A4.jpg"
+               alt="Friedemann Eichhorn — Violin">
           <div class="member-overlay">
             <span class="member-instrument">Violin</span>
             <h3 class="member-name">Friedemann<br>Eichhorn</h3>
+            <a href="biography.html#eichhorn" class="member-link"><span lang-en>Biography</span><span lang-de>Biografie</span></a>
           </div>
         </div>
+
         <div class="member-card" data-reveal>
-          <img
-            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0371_A4.jpg"
-            alt="Peter Hörr — Cello">
+          <img src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0371_A4.jpg"
+               alt="Peter Hörr — Cello">
           <div class="member-overlay">
             <span class="member-instrument">Cello</span>
             <h3 class="member-name">Peter<br>Hörr</h3>
+            <a href="biography.html#hoerr" class="member-link"><span lang-en>Biography</span><span lang-de>Biografie</span></a>
           </div>
         </div>
+
         <div class="member-card" data-reveal>
-          <img
-            src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0386_A4.jpg"
-            alt="Florian Uhlig — Piano">
+          <img src="https://www.phaetonpianotrio.com/wp-content/uploads/2015/12/s1945_0386_A4.jpg"
+               alt="Florian Uhlig — Piano">
           <div class="member-overlay">
-            <span class="member-instrument">Piano</span>
+            <span class="member-instrument">Piano / Klavier</span>
             <h3 class="member-name">Florian<br>Uhlig</h3>
+            <a href="biography.html#uhlig" class="member-link"><span lang-en>Biography</span><span lang-de>Biografie</span></a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
   <!-- PRESS -->
   <section id="press" class="section">
     <div class="wrap">
-      <div class="label" data-reveal>Press</div>
-      <h2 data-reveal>What Critics Say</h2>
+      <div class="label" data-reveal><span lang-en>Press</span><span lang-de>Presse</span></div>
+      <h2 data-reveal><span lang-en>What Critics Say</span><span lang-de>Was die Kritiker sagen</span></h2>
       <div class="press-grid">
         <div class="press-item" data-reveal>
           <p class="press-quote">"Sublime beauty of sound."</p>
@@ -206,11 +254,12 @@
       </div>
     </div>
   </section>
+
   <!-- MEDIA -->
   <section id="media" class="section section--dark">
     <div class="wrap">
-      <div class="label" data-reveal>Media</div>
-      <h2 data-reveal>Featured<br><em>Performances</em></h2>
+      <div class="label" data-reveal><span lang-en>Media</span><span lang-de>Medien</span></div>
+      <h2 data-reveal><span lang-en>Featured<br><em>Performances</em></span><span lang-de>Ausgewählte<br><em>Aufführungen</em></span></h2>
       <div class="video-grid">
         <div data-reveal>
           <div class="video-wrap">
@@ -235,13 +284,17 @@
           <p class="video-label">Beethoven · Dvořák · Haydn — Live Performance</p>
         </div>
       </div>
+      <div data-reveal style="margin-top:3rem;">
+        <a href="media.html" class="view-all-link"><span lang-en>View all media →</span><span lang-de>Alle Medien ansehen →</span></a>
+      </div>
     </div>
   </section>
+
   <!-- GALLERY -->
   <section class="section">
     <div class="wrap">
-      <div class="label" data-reveal>Gallery</div>
-      <h2 data-reveal>Selected<br><em>Images</em></h2>
+      <div class="label" data-reveal><span lang-en>Gallery</span><span lang-de>Galerie</span></div>
+      <h2 data-reveal><span lang-en>Selected<br><em>Images</em></span><span lang-de>Ausgewählte<br><em>Bilder</em></span></h2>
       <div class="members-grid" style="margin-top: 3rem;">
         <div class="member-card" data-reveal>
           <img src="https://www.phaetonpianotrio.com/wp-content/uploads/2017/11/s1945_0255_A4.jpg" alt="Phaeton Piano Trio">
@@ -258,15 +311,16 @@
       </div>
     </div>
   </section>
+
   <!-- CONTACT -->
   <section id="contact" class="section section--dark">
     <div class="wrap">
-      <div class="label" data-reveal>Contact</div>
-      <h2 data-reveal>Management<br><em>&amp; Bookings</em></h2>
+      <div class="label" data-reveal><span lang-en>Contact</span><span lang-de>Kontakt</span></div>
+      <h2 data-reveal><span lang-en>Management<br><em>&amp; Bookings</em></span><span lang-de>Management<br><em>&amp; Buchungen</em></span></h2>
       <div class="contact-grid">
         <div>
           <div class="agency" data-reveal>
-            <div class="agency-name">EU &amp; South America</div>
+            <div class="agency-name">EU &amp; <span lang-en>South America</span><span lang-de>Südamerika</span></div>
             <p>
               <strong>Berlin Klassik Artist Management</strong><br>
               Martin Soler Ruiz · Artist Manager<br>
@@ -277,7 +331,7 @@
             </p>
           </div>
           <div class="agency" data-reveal>
-            <div class="agency-name">North America</div>
+            <div class="agency-name"><span lang-en>North America</span><span lang-de>Nordamerika</span></div>
             <p>
               <strong>Shupp Artists Management</strong><br>
               Erica Shupp<br>
@@ -290,7 +344,7 @@
         </div>
         <div>
           <div class="agency" data-reveal>
-            <div class="agency-name">Ensemble Direct</div>
+            <div class="agency-name"><span lang-en>Ensemble Direct</span><span lang-de>Direktkontakt</span></div>
             <p>
               <strong>Prof. Peter Hörr</strong><br>
               Alexander-von-Szpinger-Str. 7<br>
@@ -301,7 +355,7 @@
             </p>
           </div>
           <div class="agency" data-reveal>
-            <div class="agency-name">Turkey · Middle East</div>
+            <div class="agency-name">Türkei · <span lang-en>Middle East</span><span lang-de>Naher Osten</span></div>
             <p>
               <strong>KAM Management</strong><br>
               Ruya Evren · Artist &amp; Project Manager<br>
@@ -313,71 +367,88 @@
       </div>
     </div>
   </section>
+
   <!-- FOOTER -->
   <footer class="footer">
-    <!-- Top: big name + tagline -->
     <div class="footer-top">
       <div class="footer-name">Phaeton <span>Piano Trio</span></div>
       <p class="footer-tagline">"Not by chance did the trio name itself after the son of the Greek Sun God."</p>
     </div>
-    <!-- Mid: nav columns -->
     <div class="footer-mid">
       <div class="footer-col">
-        <div class="footer-col-title">Navigate</div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#members">Artists</a>
-        <a href="#press">Press</a>
-        <a href="#media">Media</a>
-        <a href="#contact">Contact</a>
+        <div class="footer-col-title"><span lang-en>Navigate</span><span lang-de>Navigation</span></div>
+        <a href="#home"><span lang-en>Home</span><span lang-de>Start</span></a>
+        <a href="#about"><span lang-en>About</span><span lang-de>Über uns</span></a>
+        <a href="#members"><span lang-en>Artists</span><span lang-de>Künstler</span></a>
+        <a href="#press"><span lang-en>Press</span><span lang-de>Presse</span></a>
+        <a href="#media"><span lang-en>Media</span><span lang-de>Medien</span></a>
+        <a href="#contact"><span lang-en>Contact</span><span lang-de>Kontakt</span></a>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Artists</div>
-        <p>Friedemann Eichhorn</p>
-        <p>Peter Hörr</p>
-        <p>Florian Uhlig</p>
+        <div class="footer-col-title"><span lang-en>Artists</span><span lang-de>Künstler</span></div>
+        <a href="biography.html#eichhorn">Friedemann Eichhorn</a>
+        <a href="biography.html#hoerr">Peter Hörr</a>
+        <a href="biography.html#uhlig">Florian Uhlig</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Management</div>
         <a href="https://www.berlinklassikartistmanagement.com" target="_blank" rel="noopener">Berlin Klassik</a>
         <a href="https://shuppartists.com" target="_blank" rel="noopener">Shupp Artists</a>
-        <a href="mailto:peterhoerr@me.com">Direct Contact</a>
+        <a href="mailto:peterhoerr@me.com"><span lang-en>Direct Contact</span><span lang-de>Direktkontakt</span></a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Online</div>
-        <a href="https://www.phaetonpianotrio.com/en/" target="_blank" rel="noopener">Official Website</a>
+        <a href="https://www.phaetonpianotrio.com/en/" target="_blank" rel="noopener"><span lang-en>Official Website</span><span lang-de>Offizielle Website</span></a>
         <a href="https://www.facebook.com/PhaetonPianoTrio/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://shuppartists.com/phaeton-piano-trio.html" target="_blank" rel="noopener">Shupp Artists Page</a>
+        <a href="media.html"><span lang-en>Media page</span><span lang-de>Medienseite</span></a>
+        <a href="biography.html"><span lang-en>Biographies</span><span lang-de>Biografien</span></a>
       </div>
     </div>
-    <!-- Bottom bar -->
     <div class="footer-bottom">
       <p class="footer-copy">© <span id="year"></span> Phaeton Piano Trio · Friedemann Eichhorn · Peter Hörr · Florian Uhlig</p>
       <div class="footer-legal">
-        <a href="imprint.html">Imprint</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="imprint.html"><span lang-en>Imprint</span><span lang-de>Impressum</span></a>
+        <a href="privacy.html"><span lang-en>Privacy Policy</span><span lang-de>Datenschutz</span></a>
       </div>
     </div>
   </footer>
+
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
+
   <script>
+    /* ── Language switcher ── */
+    function setLang(lang) {
+      document.body.classList.toggle('lang-de', lang === 'de');
+      document.getElementById('htmlRoot').lang = lang;
+      document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+      document.getElementById('btnDE').classList.toggle('active', lang === 'de');
+      localStorage.setItem('ppt-lang', lang);
+    }
+    (function() {
+      const saved = localStorage.getItem('ppt-lang') || 'en';
+      if (saved === 'de') setLang('de');
+    })();
+
     /* ── Year ── */
     document.getElementById('year').textContent = new Date().getFullYear();
+
     /* ── Scroll progress ── */
     const progress = document.getElementById('scrollProgress');
     window.addEventListener('scroll', () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.width = (window.scrollY / total * 100) + '%';
     }, { passive: true });
+
     /* ── Header scroll ── */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
+
     /* ── Active nav on scroll ── */
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks  = document.querySelectorAll('.nav-link');
     const activeObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -388,8 +459,9 @@
       });
     }, { threshold: 0.4 });
     sections.forEach(s => activeObs.observe(s));
+
     /* ── Mobile nav ── */
-    const nav = document.getElementById('nav');
+    const nav     = document.getElementById('nav');
     const menuBtn = document.getElementById('menuBtn');
     menuBtn.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
@@ -403,6 +475,7 @@
         document.body.classList.remove('nav-open');
       });
     });
+
     /* ── Scroll reveal ── */
     const revealObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -413,6 +486,7 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
+
     /* ── Smooth scroll ── */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
@@ -420,11 +494,11 @@
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
+
     /* ── Hero slideshow ── */
     const slides = document.querySelectorAll('.hero-slide');
     const dots   = document.querySelectorAll('.hero-dot');
-    let current  = 0;
-    let timer;
+    let current  = 0, timer;
     function goTo(index) {
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
@@ -443,5 +517,6 @@
     });
     startTimer();
   </script>
+
 </body>
 </html>
