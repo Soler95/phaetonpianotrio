@@ -17,8 +17,8 @@
     <div class="header-inner">
       <a href="#home" class="logo">Phaeton <span>Piano Trio</span></a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
-        <span></span><span></span>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="nav" id="nav">
@@ -438,8 +438,12 @@
     window.addEventListener('scroll', () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.width = (window.scrollY / total * 100) + '%';
-    }, { passive: true });
-
+menuBtn.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuBtn.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  document.body.classList.toggle('nav-open', open);
+});
     /* ── Header scroll ── */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
