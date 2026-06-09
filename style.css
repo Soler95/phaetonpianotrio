@@ -461,48 +461,29 @@ body.lang-de span[lang-de] { display: inline; }
   /* Mostrar hamburger */
   .menu-btn { display: flex; }
 
-  /* Ocultar nav hasta que se abra */
   .nav {
-    /* Posición: cubre toda la pantalla */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-
-    /* Fondo sólido oscuro — sin transparencia */
-    background: #0d0b09;
-
-    /* Layout vertical centrado */
+    width: 100vw;
+    height: 100vh;
+    background: #0d0b09 !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-
-    /* Oculto fuera de pantalla a la derecha */
-    transform: translateX(100%);
-
-    /* Invisible + no interactuable cuando está cerrado */
-    visibility: hidden;
-
-    /* Transición: slide + visibility con delay al cerrar */
-    transition:
-      transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-      visibility 0s linear 0.4s;
-
-    /* Encima de todo */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
     z-index: 9000;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 
-  /* Cuando está abierto */
   .nav.open {
-    transform: translateX(0);
-    visibility: visible;
-    /* visibility aparece al instante al abrir */
-    transition:
-      transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-      visibility 0s linear 0s;
+    opacity: 1;
+    pointer-events: all;
   }
 
   .nav-link {
