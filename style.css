@@ -168,7 +168,9 @@ p + p { margin-top: 1rem; }
   overflow: hidden;
   display: flex; align-items: center; justify-content: flex-start;
 }
+.hero { background: var(--ink); }
 .hero-slides, .hero-slide { position: absolute; inset: 0; }
+.hero-slides { top: var(--hh); } /* la foto empieza debajo del header: no tapa las cabezas */
 .hero-slide { background-size: cover; background-position: center top; opacity: 0; transition: opacity 1.6s var(--ease); }
 .hero-slide.active { opacity: 1; }
 .hero-overlay {
@@ -325,13 +327,13 @@ cite { font-size: 10px; font-weight: 500; letter-spacing: 0.25em; text-transform
 /* ============================================================
    SUBPAGES
 ============================================================ */
-.subpage-hero { min-height: 55vh; display: flex; align-items: flex-end; padding-bottom: clamp(3rem, 5vw, 5rem); background: var(--ink); position: relative; overflow: hidden; padding-top: var(--hh); }
-.subpage-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 30%; opacity: 1; filter: grayscale(15%); }
+.subpage-hero { min-height: 85svh; display: flex; align-items: flex-end; padding-bottom: clamp(3rem, 5vw, 5rem); background: var(--ink); position: relative; overflow: hidden; padding-top: var(--hh); }
+.subpage-hero-bg { position: absolute; inset: 0; top: var(--hh); background-size: cover; background-position: var(--pos, center top); opacity: 1; filter: grayscale(15%); }
 .subpage-hero::after {
   content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(to bottom,
-    rgba(10,8,6,0.35) 0%,
-    rgba(10,8,6,0.05) 35%,
+    rgba(10,8,6,0)    0%,
+    rgba(10,8,6,0)    35%,
     rgba(10,8,6,0.55) 65%,
     rgba(10,8,6,0.9)  100%);
 }
@@ -388,11 +390,11 @@ body.lang-de span[lang-de] { display: inline; }
     padding-bottom: 4.5rem;
   }
   .hero-slide {
-    background-position: var(--pos-m, center 20%);
+    background-position: var(--pos-m, center top);
   }
   .hero-overlay {
     background: linear-gradient(to bottom,
-      rgba(10,8,6,0.25) 0%,
+      rgba(10,8,6,0)    0%,
       rgba(10,8,6,0)    20%,
       rgba(10,8,6,0)    40%,
       rgba(10,8,6,0.6)  65%,
@@ -486,7 +488,7 @@ body.lang-de span[lang-de] { display: inline; }
 
   /* Subpages */
   .bio-image img   { aspect-ratio: 3/2; }
-  .subpage-hero    { min-height: 48svh; }
+  .subpage-hero    { min-height: 70svh; }
   .subpage-hero h1 { font-size: clamp(30px, 9vw, 52px); }
   .back-link       { margin-bottom: 2.5rem; }
   .recording-grid  { grid-template-columns: 1fr; }
