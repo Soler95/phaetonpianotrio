@@ -467,6 +467,20 @@ body.lang-de span[lang-de] { display: inline; }
   .hero-scroll   { display: none; }
   .hero-dots     { bottom: 1.25rem; }
 
+  /* Foto del hero arriba (no a pantalla completa) para que se vea el trío entero; el texto va debajo */
+  .hero-slides {
+    bottom: auto; height: 54%;
+    -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  }
+  .hero-overlay {
+    background: linear-gradient(to bottom,
+      rgba(10,8,6,0)   0%,
+      rgba(10,8,6,0)   45%,
+      rgba(10,8,6,0.5) 60%,
+      rgba(10,8,6,0)   100%);
+  }
+
   /* Members — una por fila, formato retrato, cara visible */
   .members-grid   { grid-template-columns: 1fr; gap: 2px; margin-top: 2rem; }
   .member-card    { aspect-ratio: 3/4; }
