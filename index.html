@@ -13,9 +13,7 @@
   <meta property="og:url" content="https://phaetonpianotrio.com/">
   <meta property="og:image" content="https://phaetonpianotrio.com/images/phaeton-hero-1.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -189,14 +187,18 @@
       <h2 data-reveal><span lang-en>Featured<br><em>Performances</em></span><span lang-de>Ausgewählte<br><em>Aufführungen</em></span></h2>
       <div class="video-grid">
         <div data-reveal>
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/DVtYap2uWXo" title="Phaeton Piano Trio — Brahms, Music and Beyond Festival Ottawa" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-wrap video-facade" data-yt="DVtYap2uWXo" data-title="Phaeton Piano Trio — Brahms, Music and Beyond Festival Ottawa">
+            <img src="images/phaeton-hero-2.jpg" alt="" loading="lazy">
+            <button class="video-play" type="button" aria-label="Play video: Phaeton Piano Trio — Brahms, Music and Beyond Festival Ottawa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <p class="video-consent"><span lang-en>Playing the video loads content from YouTube (<a href="privacy.html">privacy</a>).</span><span lang-de>Beim Abspielen werden Inhalte von YouTube geladen (<a href="privacy.html">Datenschutz</a>).</span></p>
           </div>
           <p class="video-label"><span lang-en>Brahms Piano Trio — Music and Beyond Festival, Ottawa</span><span lang-de>Brahms Klaviertrio — Music and Beyond Festival, Ottawa</span></p>
         </div>
         <div data-reveal>
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/_RDVd9EOkTY" title="Phaeton Piano Trio — Beethoven, Dvořák, Haydn (Hochschule für Musik Franz Liszt Weimar)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-wrap video-facade" data-yt="_RDVd9EOkTY" data-title="Phaeton Piano Trio — Beethoven, Dvořák, Haydn (Hochschule für Musik Franz Liszt Weimar)">
+            <img src="images/phaeton-hero-1.jpg" alt="" loading="lazy">
+            <button class="video-play" type="button" aria-label="Play video: Phaeton Piano Trio — Beethoven, Dvořák, Haydn (Hochschule für Musik Franz Liszt Weimar)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <p class="video-consent"><span lang-en>Playing the video loads content from YouTube (<a href="privacy.html">privacy</a>).</span><span lang-de>Beim Abspielen werden Inhalte von YouTube geladen (<a href="privacy.html">Datenschutz</a>).</span></p>
           </div>
           <p class="video-label"><span lang-en>Beethoven · Dvořák · Haydn — Video production with excerpts, Hochschule für Musik Franz Liszt Weimar</span><span lang-de>Beethoven · Dvořák · Haydn — Videoproduktion mit Ausschnitten, Hochschule für Musik Franz Liszt Weimar</span></p>
         </div>
@@ -362,16 +364,33 @@
     const slides = document.querySelectorAll('.hero-slide');
     const dots   = document.querySelectorAll('.hero-dot');
     let current = 0, timer;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function goTo(i) {
-      slides[current].classList.remove('active');
+      const prev = slides[current];
+      prev.classList.remove('active');
       dots[current].classList.remove('active');
+      setTimeout(() => { if (!prev.classList.contains('active')) prev.classList.remove('kb'); }, 1700);
       current = i;
-      slides[current].classList.add('active');
+      slides[current].classList.add('active', 'kb');
       dots[current].classList.add('active');
     }
-    function startTimer() { timer = setInterval(() => goTo((current + 1) % slides.length), 5500); }
+    function startTimer() { if (!reduceMotion) timer = setInterval(() => goTo((current + 1) % slides.length), 5500); }
     dots.forEach(d => d.addEventListener('click', () => { clearInterval(timer); goTo(+d.dataset.index); startTimer(); }));
+    requestAnimationFrame(() => requestAnimationFrame(() => slides[current].classList.add('kb')));
     startTimer();
+    /* ── Video facades: YouTube loads only on click ── */
+    document.querySelectorAll('.video-facade').forEach(el => {
+      el.addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        const f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + el.dataset.yt + '?autoplay=1&rel=0';
+        f.title = el.dataset.title;
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        f.allowFullscreen = true;
+        el.classList.remove('video-facade');
+        el.replaceChildren(f);
+      });
+    });
   </script>
 
 </body>
