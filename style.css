@@ -274,6 +274,10 @@ cite { font-size: 10px; font-weight: 500; letter-spacing: 0.25em; text-transform
 .member-link { display: inline-block; margin-top: 0.8rem; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); border-bottom: 1px solid rgba(212,150,42,0.4); padding-bottom: 2px; opacity: 0; transform: translateY(6px); transition: opacity 0.3s, transform 0.3s; }
 .member-card:hover .member-link { opacity: 1; transform: none; }
 
+/* Galería de fotos (media.html): todas las fotos son 3:2, se muestran sin recortar */
+.gallery-grid .member-card { aspect-ratio: 3/2; }
+.gallery-grid .member-card img { object-position: center; }
+
 /* ============================================================
    PRESS
 ============================================================ */
