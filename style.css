@@ -356,6 +356,7 @@ cite { font-size: 10px; font-weight: 500; letter-spacing: 0.25em; text-transform
 .bio-text h3 { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 48px); margin-bottom: 0.3rem; color: var(--ink); }
 .bio-text .instrument-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fire); margin-bottom: 2rem; display: block; }
 .bio-text p { color: var(--ink-mid); font-size: clamp(14px, 1.3vw, 16px); line-height: 1.9; }
+.bio-image--group img { aspect-ratio: 1/1; object-position: 50% 60%; }
 
 .media-section-title { font-family: var(--serif); font-size: clamp(22px, 3vw, 38px); color: var(--ink); margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--fire-border); }
 .media-section + .media-section { margin-top: clamp(4rem, 7vw, 7rem); }
